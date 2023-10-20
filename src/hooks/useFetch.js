@@ -16,17 +16,14 @@ function useFetch(url) {
       setLoading('loading...')
       setData(null);
       setError(null);
-    //   const source = axios.CancelToken.source();
-    //   console.log(VITE_UNSPLASH_ACCESS_KEY)
-    // const controller=new AbortController();
+   
       axios.get(url, 
         {
             baseURL: BASE_URL,
             headers: {
                 Authorization: `Client-ID ${VITE_UNSPLASH_ACCESS_KEY}`,
               },
-            // cancelToken: source.token 
-            // signal: controller.signal,
+          
         })
       .then(res => {
           setLoading(false);
@@ -39,9 +36,7 @@ function useFetch(url) {
           setLoading(false)
           setError(err.message)
       })
-    //   return ()=>{
-    //     controller.abort()
-    //   }
+   
   }, [url])
 
   return { data, loading, error }

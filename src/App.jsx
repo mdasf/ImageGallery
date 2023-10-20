@@ -1,22 +1,17 @@
-import './App.css'
-import Home from './component/Home'
-import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
-import Popup from './component/Popup'
+import "./App.css";
+import Home from "./component/Home";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Error from "./component/Error";
 
 function App() {
   return (
-   
-      <Router>
+    <Router>
       <Routes>
-        <Route path='/' element={<Home />} />
-        {/* <Route path='/:id' element={<Gallery />} /> */}
-        <Route path='/photos/:id' element={<Popup />} />
-        <Route path='*' element={<Home />} />
+        <Route index path="/" element={<Home />} />
+        <Route path="/*" element={<Error />} />
       </Routes>
     </Router>
-    
-   
-  )
+  );
 }
 
-export default App
+export default App;

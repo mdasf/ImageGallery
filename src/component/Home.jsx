@@ -10,7 +10,6 @@ function Home() {
 
   return (<div className='relative dark:bg-[#232323] transition-all ease-in-out'>
     <Navbar setSearchQuery={setSearchQuery} />
-   {/* <Hero setSearchQuery={setSearchQuery}  /> */}
     {searchQuery ? 
        <Gallery searchQuery={searchQuery}/>
     :
