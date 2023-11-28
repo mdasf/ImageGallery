@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 import {BASE_URL} from '../constants.js'
 
-const VITE_UNSPLASH_ACCESS_KEY='';
+const VITE_UNSPLASH_ACCESS_KEY='5eGqstnADtAkeLswb9WUErCKiHE3XAHqPR2a3RvOGNw';
 
 
 function useFetch(url) {
